@@ -1,5 +1,6 @@
 import styles from './Team.module.css';
 import { Linkedin, Github, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Team() {
     return (
@@ -10,7 +11,14 @@ export default function Team() {
                 <div className={styles.grid}>
                     {/* Francisco */}
                     <div className={styles.card}>
-                        <div className={styles.imagePlaceholder}>FC</div>
+                        <div style={{ position: 'relative', width: '150px', height: '150px', margin: '0 auto 1.5rem', borderRadius: '50%', overflow: 'hidden', border: '4px solid #0a0a0a' }}>
+                            <Image
+                                src="/img/carranza.jpg"
+                                alt="Francisco Carranza"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                            />
+                        </div>
                         <h3 className={styles.name}>Francisco Carranza</h3>
                         <span className={styles.role}>Lead Developer & Arquitecto</span>
                         <p className={styles.bio}>
@@ -30,7 +38,14 @@ export default function Team() {
 
                     {/* Christian */}
                     <div className={styles.card}>
-                        <div className={styles.imagePlaceholder}>CC</div>
+                        <div style={{ position: 'relative', width: '150px', height: '150px', margin: '0 auto 1.5rem', borderRadius: '50%', overflow: 'hidden', border: '4px solid #0a0a0a' }}>
+                            <Image
+                                src="/img/WhatsApp Image 2025-12-11 at 17.41.22_b3f1100f.jpg"
+                                alt="Christian Chiquito"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                            />
+                        </div>
                         <h3 className={styles.name}>Christian Chiquito</h3>
                         <span className={styles.role}>Full Stack Developer & AI Specialist</span>
                         <p className={styles.bio}>

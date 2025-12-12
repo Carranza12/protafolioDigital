@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import styles from './Contact.module.css';
-import { Mail, MessageSquare, ArrowRight, Smartphone } from 'lucide-react';
+import { Mail, MessageSquare, Smartphone } from 'lucide-react';
 
 export default function Contact() {
     const [message, setMessage] = useState('');
@@ -33,10 +33,7 @@ export default function Contact() {
                             <div className={styles.iconBox}><MessageSquare size={20} /></div>
                             <span>Respuesta rápida vía WhatsApp</span>
                         </div>
-                        <div className={styles.contactItem}>
-                            <div className={styles.iconBox}><Mail size={20} /></div>
-                            <span>contacto@tudominio.com</span>
-                        </div>
+                        {/* Email eliminado por solicitud del usuario */}
                     </div>
                 </div>
 
@@ -55,9 +52,14 @@ export default function Contact() {
                         type="button"
                         className={styles.submitBtn}
                         onClick={handleWhatsAppClick}
-                        style={{ backgroundColor: '#25D366' }} // Color de marca WhatsApp
+                        disabled={!message.trim()}
+                        style={{
+                            backgroundColor: !message.trim() ? '#52525b' : '#25D366',
+                            cursor: !message.trim() ? 'not-allowed' : 'pointer',
+                            opacity: !message.trim() ? 0.6 : 1
+                        }}
                     >
-                        Enviar a WhatsApp <Smartphone size={18} style={{ display: 'inline', marginLeft: '8px' }} />
+                        Enviar a WhatsApp
                     </button>
                 </form>
             </div>

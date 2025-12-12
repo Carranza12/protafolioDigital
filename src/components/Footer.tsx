@@ -8,9 +8,9 @@ export default function Footer() {
                 &copy; {new Date().getFullYear()} Francisco Carranza & Christian Chiquito. Todos los derechos reservados.
             </p>
             <div className={styles.socials}>
-                <a href="#" className={styles.socialLink}><Github size={18} /></a>
+                {/*  <a href="#" className={styles.socialLink}><Github size={18} /></a>
                 <a href="#" className={styles.socialLink}><Linkedin size={18} /></a>
-                <a href="#" className={styles.socialLink}><Twitter size={18} /></a>
+                <a href="#" className={styles.socialLink}><Twitter size={18} /></a> */}
             </div>
         </footer>
     );
